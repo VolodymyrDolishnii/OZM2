@@ -14,8 +14,6 @@ activeImage();
 renderECharts();
 
 container[0].appendChild(image);
-// equalizedImage.height = image.height;
-// equalizedImage.width = image.width;
 
 function renderCharts() {
     image.onload = function () {
@@ -416,9 +414,9 @@ function activeImage() {
     function setNewColor(activeIndex) {
         imageList.forEach((item, index) => {
             if (index === activeIndex) {
-                imageList[activeIndex].style.borderColor = 'rgb(115, 191, 38)';
+                imageList[activeIndex].classList.add('active');
             } else {
-                item.style.borderColor = 'rgb(199, 195, 195)';
+                item.classList.remove('active');
             }
         });
     }

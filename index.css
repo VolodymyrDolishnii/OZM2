@@ -20,6 +20,10 @@ body {
     border: 10px solid rgb(199, 195, 195);
 }
 
+.active {
+    border: 10px solid rgb(115, 191, 38) !important;
+}
+
 .channels {
     display: flex;
     width: 100vw;
