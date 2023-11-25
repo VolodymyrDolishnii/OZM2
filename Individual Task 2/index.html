@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Histogram</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="./index.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+    <h1 style="text-align: center; font-size: xx-large;">Choose image</h1>
+    <div class="images-list">
+        <div class="image-variant">
+            <input onclick="setImage('./sample.bmp', './output.png')" type="image" src="./sample.bmp">
+        </div>
+        <div class="image-variant">
+            <input onclick="setImage('./sample2.jpg', './output2.png')" type="image" src="./sample2.jpg">
+        </div>
+        <div class="image-variant">
+            <input onclick="setImage('./sample3.jpg', './output3.png')" type="image" src="./sample3.jpg">
+        </div>
+    </div>
+    <canvas id="histogramCanvas"></canvas>
+    <div class="channels">
+        <canvas id="histogramCanvasRed"></canvas>
+        <canvas id="histogramCanvasGreen"></canvas>
+        <canvas id="histogramCanvasBlue"></canvas>
+    </div>
+    <div class="equalized__container">
+        <div class="image-container">
+            <p class="default-heading">Default image</p>
+            <!-- <img src="./sample.bmp" class="default-image"/> -->
+        </div>
+        <div class="image-container">
+            <p class="equalized-heading">Equalized image</p>
+            <!-- <canvas id="equalized" width="1920" height="1080"></canvas> -->
+        </div>
+    </div>
+    <canvas id="histogramECanvas"></canvas>
+    <div class="channels">
+        <canvas id="histogramECanvasRed"></canvas>
+        <canvas id="histogramECanvasGreen"></canvas>
+        <canvas id="histogramECanvasBlue"></canvas>
+    </div>
+    <div>
+        <p style="text-align: center; font-size: xx-large;">Roberts</p>
+        <div class="roberts-container">
+            <canvas id="robertsCanvas" width="775" height="500"></canvas>
+            <canvas id="robertsECanvas" width="775" height="500"></canvas>
+        </div>
+    </div>
+    <div>
+        <p style="text-align: center; font-size: xx-large;">Prewitt</p>
+        <div class="roberts-container">
+            <canvas id="prewittCanvas" width="775" height="500"></canvas>
+            <canvas id="prewittECanvas" width="775" height="500"></canvas>
+        </div>
+    </div>
+    <div>
+        <p style="text-align: center; font-size: xx-large;">Sobel</p>
+        <div class="roberts-container">
+            <canvas id="sobelCanvas" width="775" height="500"></canvas>
+            <canvas id="sobelECanvas" width="775" height="500"></canvas>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

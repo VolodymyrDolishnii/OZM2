@@ -1,0 +1,88 @@
+body {
+    overflow-x: hidden;
+}
+
+.images-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-variant {
+    height: 300px;
+    width: 300px;
+}
+
+.image-variant input {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 10px solid rgb(199, 195, 195);
+}
+
+.channels {
+    display: flex;
+    width: 100vw;
+    /* padding: 0 50px; */
+    justify-content: center;
+}
+
+.channels canvas {
+    /* width: 500px !important; */
+    width: calc(90% / 3) !important;
+    height: 400px !important;
+}
+
+#histogramCanvas {
+    padding: 50px;
+}
+
+.equalized__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.image-container {
+    position: relative;
+    width: 80%; 
+    /* height: 400px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.default-heading {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+}
+
+.default-image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#equalized {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.equalized-heading {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+}
+
+.roberts-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: center;
+    gap: 50px;
+}
